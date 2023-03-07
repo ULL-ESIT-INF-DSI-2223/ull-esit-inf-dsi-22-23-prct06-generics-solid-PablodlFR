@@ -1,0 +1,10 @@
+{
+  "entryPoints": [
+    "./src/ej-clase-1.ts",
+    "./src/ej-clase-2.ts",
+    "./src/ejercicio-1.ts",
+    "./src/ejercicio-2.ts"
+
+  ],
+  "out": "./docs" 
+}
