@@ -1,33 +1,76 @@
-class ContInstance {
-  private cont: number;
-  private static contInstance:ContInstance;
+interface Streamable<T> {
+  // year: number;
+  // name: string;
+  addItem(newItem: T): void;
+  getItem(index: number): T;
+  getNumberOfItems(): number;
+}
 
-  private constructor() {
-    this.cont = 0;
+abstract class BasicStreamableCollection<T> implements Streamable<T> {
+  // year: number;
+  // name: string;
+  constructor(protected items: T[]) {   
+    // this.year = year;
+    // this.name = name;   
   }
 
-  getCont() {
-    return ContInstance.contInstance.cont;
+  addItem(newItem: T){
+    this.items.push(newItem);
   }
-
-  sumCont() {
-    ContInstance.contInstance.cont++;
+  getItem(index: number): T{
+    return this.items[index];
   }
-
-  public static getContInstance(): ContInstance {
-    if (!ContInstance.contInstance) {
-      ContInstance.contInstance = new ContInstance();
-    }
-    return ContInstance.contInstance;
+  getNumberOfItems() {
+    return this.items.length;
+  }
+  print() {
+    this.items.forEach(element => console.log(element));
   }
 }
 
-const contInstance = ContInstance.getContInstance();
-contInstance.sumCont();
+class Series {
+  seasons: number;
+  year: number;
+  name: string;
+  constructor(year: number, name: string){    
+    this.year = year;
+    this.name = name;
+  }
+}
 
+class Films {
+  duration: number;
+  year: number;
+  name: string;
+  constructor(year: number, name: string){
+    this.year = year;
+    this.name = name;
+  }
+}
 
-const secondContInstance = ContInstance.getContInstance();
-secondContInstance.sumCont();
+class SeriesCollection extends BasicStreamableCollection<Series> {
+  constructor(items: Series[]){
+    super(items);
+  }
+}
 
-console.log(contInstance.getCont());
-console.log(secondContInstance.getCont());
+class FilmsCollection extends BasicStreamableCollection<Films> {
+
+  constructor(items: Films[]){
+    super(items);
+  }
+}
+
+const streamSeriesCollection = new SeriesCollection([
+  new Series(1923, "prueba"),
+  new Series(1921, "prueba2")
+]);
+
+const streamFilmsCollection = new FilmsCollection([
+  new Films(2001, "prueba"),
+  new Films(2002, "prueba2")
+])
+
+//console.log();
+streamSeriesCollection.print()
+streamFilmsCollection.print();
