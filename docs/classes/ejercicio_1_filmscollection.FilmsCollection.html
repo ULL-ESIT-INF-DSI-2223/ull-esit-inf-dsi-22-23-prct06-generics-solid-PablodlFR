@@ -17,7 +17,7 @@
 <li><a href="ejercicio_1_filmscollection.FilmsCollection.html">FilmsCollection</a></li></ul>
 <h1>Class FilmsCollection</h1></div>
 <section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>Collectable interface to implements collections of items(array).</p>
+<div class="tsd-comment tsd-typography"><p>Flms collection data structure.</p>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
@@ -26,7 +26,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">FilmsCollection</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/filmscollection.ts#L4">ejercicio-1/filmscollection.ts:4</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/filmscollection.ts#L7">ejercicio-1/filmscollection.ts:7</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -66,7 +66,7 @@
 <h4 class="tsd-returns-title">Returns <a href="ejercicio_1_filmscollection.FilmsCollection.html" class="tsd-signature-type" data-tsd-kind="Class">FilmsCollection</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/filmscollection.ts#L5">ejercicio-1/filmscollection.ts:5</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/filmscollection.ts#L8">ejercicio-1/filmscollection.ts:8</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited"><a id="items" class="tsd-anchor"></a>
@@ -74,7 +74,7 @@
 <div class="tsd-signature">items<span class="tsd-signature-symbol">:</span> <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#items">items</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L10">ejercicio-1/basicstreamablecollection.ts:10</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L12">ejercicio-1/basicstreamablecollection.ts:12</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="addItem" class="tsd-anchor"></a>
@@ -82,47 +82,67 @@
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="addItem.addItem-1">add<wbr/>Item<span class="tsd-signature-symbol">(</span>newItem<span class="tsd-signature-symbol">: </span><a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#addItem.addItem-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Add an item to the collection.</p>
+
+<h3>Returns</h3><p>true is the item was added.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>newItem: <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a></h5></li></ul></div>
+<h5>newItem: <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a></h5>
+<div class="tsd-comment tsd-typography"><p>Object to include in the collection.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#addItem">addItem</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L36">ejercicio-1/basicstreamablecollection.ts:36</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L49">ejercicio-1/basicstreamablecollection.ts:49</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="getItem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Item</span><a href="#getItem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="getItem.getItem-1">get<wbr/>Item<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><a href="#getItem.getItem-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get an item according to the index.</p>
+
+<h3>Returns</h3><p>The selected item.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>index: <span class="tsd-signature-type">number</span></h5></li></ul></div>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>The index&#39;s item that will be returned.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a></h4><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#getItem">getItem</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L42">ejercicio-1/basicstreamablecollection.ts:42</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L60">ejercicio-1/basicstreamablecollection.ts:60</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="getNumberOfItems" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Number<wbr/>Of<wbr/>Items</span><a href="#getNumberOfItems" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="getNumberOfItems.getNumberOfItems-1">get<wbr/>Number<wbr/>Of<wbr/>Items<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getNumberOfItems.getNumberOfItems-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the number of items in a collection.</p>
+
+<h3>Returns</h3><p>the number of items.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#getNumberOfItems">getNumberOfItems</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L45">ejercicio-1/basicstreamablecollection.ts:45</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L67">ejercicio-1/basicstreamablecollection.ts:67</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="print" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>print</span><a href="#print" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="print.print-1">print<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#print.print-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Print films collection.</p>
+
+<h3>Returns</h3><p>string with the data of each film in the collection.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#print">print</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/filmscollection.ts#L9">ejercicio-1/filmscollection.ts:9</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/filmscollection.ts#L15">ejercicio-1/filmscollection.ts:15</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="removeItem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Item</span><a href="#removeItem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -142,48 +162,66 @@
 <h4 class="tsd-returns-title">Returns <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a></h4><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#removeItem">removeItem</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L26">ejercicio-1/basicstreamablecollection.ts:26</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L35">ejercicio-1/basicstreamablecollection.ts:35</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="searchByDuration" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>search<wbr/>By<wbr/>Duration</span><a href="#searchByDuration" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="searchByDuration.searchByDuration-1">search<wbr/>By<wbr/>Duration<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span><a href="#searchByDuration.searchByDuration-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get a film array filter by duration.</p>
+
+<h3>Returns</h3><p>films array with the results.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>num: <span class="tsd-signature-type">number</span></h5></li></ul></div>
+<h5>num: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>number of the duration in minutes to search.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/filmscollection.ts#L18">ejercicio-1/filmscollection.ts:18</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/filmscollection.ts#L28">ejercicio-1/filmscollection.ts:28</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="searchByName" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>search<wbr/>By<wbr/>Name</span><a href="#searchByName" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="searchByName.searchByName-1">search<wbr/>By<wbr/>Name<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span><a href="#searchByName.searchByName-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get an array filter by name.</p>
+
+<h3>Returns</h3><p>array of the results.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>str: <span class="tsd-signature-type">string</span></h5></li></ul></div>
+<h5>str: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>string of the name to search.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#searchByName">searchByName</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L17">ejercicio-1/basicstreamablecollection.ts:17</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L27">ejercicio-1/basicstreamablecollection.ts:27</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="searchByYear" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>search<wbr/>By<wbr/>Year</span><a href="#searchByYear" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="searchByYear.searchByYear-1">search<wbr/>By<wbr/>Year<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span><a href="#searchByYear.searchByYear-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get an array filter by year.</p>
+
+<h3>Returns</h3><p>array of the results.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>num: <span class="tsd-signature-type">number</span></h5></li></ul></div>
+<h5>num: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>number of the year to search.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="ejercicio_1_films.Films.html" class="tsd-signature-type" data-tsd-kind="Class">Films</a><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html">BasicStreamableCollection</a>.<a href="ejercicio_1_basicstreamablecollection.BasicStreamableCollection.html#searchByYear">searchByYear</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/05494bf/src/ejercicio-1/basicstreamablecollection.ts#L13">ejercicio-1/basicstreamablecollection.ts:13</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/blob/ec174ca/src/ejercicio-1/basicstreamablecollection.ts#L19">ejercicio-1/basicstreamablecollection.ts:19</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">

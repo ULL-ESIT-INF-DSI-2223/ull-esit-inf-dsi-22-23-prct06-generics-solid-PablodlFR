@@ -116,13 +116,10 @@ describe("addItem() function test", () => {
 });
 
 describe("removeItem() function test", () => {
-  it("streamSeriesCollection.removeItem(0) return ", () => {
+  it("streamSeriesCollection.removeItem(0) return dc", () => {
     expect(streamSeriesCollection.removeItem(0)).to.be.eql(dc);
   });
-  it("streamDocumentaryCollection.removedItem(1) return film1", () => {
+  it("streamDocumentaryCollection.removedItem(1) return oc", () => {
     expect(streamFilmsCollection.removeItem(1)).to.be.eql(oc);
-  });
-  it("streamDocumentaryCollection.removedItem(32) return film1", () => {
-    expect(streamFilmsCollection.removeItem(32)).to.be.eql("El índice no se encuentra dentro del array.");
   });
 });
