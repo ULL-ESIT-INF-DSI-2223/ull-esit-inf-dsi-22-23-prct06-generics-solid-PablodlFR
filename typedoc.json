@@ -1,10 +1,13 @@
 {
   "entryPoints": [
-    "./src/ej-clase-1.ts",
-    "./src/ej-clase-2.ts",
-    "./src/ejercicio-1.ts",
-    "./src/ejercicio-2.ts"
-
+    "./src/ej-clase/collectable.ts",
+    "./src/ej-clase/printable.ts",
+    "./src/ej-clase/printablecollection.ts",
+    "./src/ej-clase/numericprintablecollection.ts",
+    "./src/ej-clase/stringprintablecollectable.ts",
+    // "./src/ej-clase-2.ts",
+    // "./src/ejercicio-1.ts",
+    // "./src/ejercicio-2.ts"
   ],
   "out": "./docs" 
 }

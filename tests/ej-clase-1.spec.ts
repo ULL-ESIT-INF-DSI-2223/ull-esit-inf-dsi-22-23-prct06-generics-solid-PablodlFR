@@ -1,7 +1,7 @@
 import "mocha";
 import { expect } from "chai";
-import { NumericPrintableCollection } from "../src/ej-clase-1";
-import { StringPrintableCollection } from "../src/ej-clase-1";
+import { NumericPrintableCollection } from "../src/ej-clase/numericprintablecollection";
+import { StringPrintableCollection } from "../src/ej-clase/stringprintablecollection";
 
 const numCollection = new NumericPrintableCollection([1, 2, 3]);
 const numCollection2 = new NumericPrintableCollection([14, 201, 76]);
