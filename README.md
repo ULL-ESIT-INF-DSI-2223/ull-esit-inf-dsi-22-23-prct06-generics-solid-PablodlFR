@@ -144,10 +144,10 @@ export class StringPrintableCollection extends PrintableCollection<string> {
 }
 ```
 La clase abstracta _PrintableCollection_ implementa una colección basada en un array que implementa una serie de métodos muy útiles a la hora de gestionar una colección:
-** addItem() -> Añade un objeto a la colección pasado por parámetro.
-** getItem() -> Devuelve un objeto de la colección según el índice pasado por parámetro.
-** removeItem() -> Elimina un objeto de la colección según el índice pasado por parámetro.
-** getNumberOfItems() -> Devuelve el número de objetos que componen la colección.
+* addItem() -> Añade un objeto a la colección pasado por parámetro.
+* getItem() -> Devuelve un objeto de la colección según el índice pasado por parámetro.
+* removeItem() -> Elimina un objeto de la colección según el índice pasado por parámetro.
+* getNumberOfItems() -> Devuelve el número de objetos que componen la colección.
 Se declara el método print() como abstracto ya que es obligatorio al implementar la interfaz _Printable_ y está es implementada en las subclases, devolviendo en forma de cadena separadas por comas todos los elementos de la colección.
 ## Ejercicios guion
 ### Ejercicio 1 - DSIflix
