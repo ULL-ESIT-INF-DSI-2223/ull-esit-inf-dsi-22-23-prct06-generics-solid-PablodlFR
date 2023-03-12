@@ -15,7 +15,8 @@
     "./src/ejercicio-1/documentarycollection.ts",
     "./src/ejercicio-1/filmscollection.ts",
     "./src/ejercicio-1/seriescollection.ts",
-    // "./src/ej-clase-2.ts",
+    "./src/ejercicio-2/listable.ts",
+    "./src/ejercicio-2/list.ts",
     // "./src/ejercicio-1.ts",
     // "./src/ejercicio-2.ts"
   ],

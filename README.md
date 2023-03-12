@@ -149,12 +149,13 @@ La clase abstracta _PrintableCollection_ implementa una colección basada en un 
 * removeItem() -> Elimina un objeto de la colección según el índice pasado por parámetro.
 * getNumberOfItems() -> Devuelve el número de objetos que componen la colección.
 \
+\
 Se declara el método print() como abstracto ya que es obligatorio al implementar la interfaz _Printable_ y esta es implementada en las subclases, devolviendo en forma de cadena separadas por comas todos los elementos de la colección.
 \
 \
 Se han llevado a acabo las pruebas correspondientes para comprobar el correcto funcionamiento del programa:
 ```
-print function tests from NumericPrintableCollection
+  print function tests from NumericPrintableCollection
     ✔ numCollection.print() returns '1, 2, 3'
     ✔ numCollection.print() returns '14, 201, 76'
 
@@ -227,6 +228,8 @@ export interface Collectable<T> {
 }
 ```
 Posteriormente creamos la clase abstracta _basicstreamblecollection_ que implementa los métodos de las interfaces, menos print() que es declarada e implementada en las subclases, siendo tres subclases, una por cada uno de los tipos de contenidos de la plataforma:
+\
+\
 _Series_:
 ```TypeScript
 /**
@@ -456,6 +459,8 @@ Como podemos ver en las tres clases anteriores, además del método _print()_ qu
 * Serie -> searchBySeasons();
 * Película -> searchByDuration();
 * Documental -> searchByGender();
+\
+\
 Por último vemos la clase abstracta de la cual heredan las tres anteriores, con los correspondientes métodos obligatorios de las interfaces. Para que algunos de los métodos funcione correctamente he tenido que indicar que el tipo genérico solamente puede ser una serie, película o documental, tal y como se comentó en clase con el ejemplo del método print().
 \
 \
@@ -531,7 +536,7 @@ export abstract class BasicStreamableCollection<T extends Series | Films | Docum
 ```
 Para corroborar que todos los métodos de las clases mostradas anteriormente, así como los distintos métodos de búsqueda dentro de cada una de las colecciones se han realizado unas serie de test con _mocha_ y _chai_, siendo estas las siguientes:
 ```
-print() function tests
+  print() function tests
     ✔ streamSeriesCollection.print() returns 'Detective Conan, 1996, 32 seasons. Castle, 2009, 8 seasons. '
     ✔ streamFilmsCollection.print() returns 'Senderos de Gloria, 1957, 86 minutes. Octubre, 1927, 115 minutes. La ola, 2008, 108 minutes. '
     ✔ streamDocumentaryCollection.print() returns 'Rumores de guerra, 2003, Gender: Militar. El triunfo de la voluntad, 1935, Gender: Militar. El 7 de diciembre, 1943, Gender: Militar. Cantábrico, 2017, Gender: Naturaleza. '
@@ -585,6 +590,192 @@ File                            | % Stmts | % Branch | % Funcs | % Lines | Uncov
 --------------------------------|---------|----------|---------|---------|-------------------
 ```
 ### Ejercicio 2 - Implementación de una lista y sus operaciones
+Este ejercicio consiste en implementar una clase genérica que conforme una lista de elementos de cualquier tipo, así como una serie de operaciones.
+\
+\
+Lo primero que he hecho ha sido crear una interfaz genérica con todos los métodos que nuestra clase debe implementar.
+\
+\
+_Listable_:
+```TypeScript
+/**
+ * Interface with the methods we need in a class that implements lists.
+ */
+export interface Listable<T> {
+  append(list: List<T>): List<T>;
+  concatenate(...list: List<T>[]): List<T>;
+  filter(callback): List<T>;
+  length(): number;
+  map(callback): List<T>;
+  reduce(initialValor, accumulator, callback);
+  reverse(): List<T>;
+  forEach(callback);
+}
+```
+A continuación realicé una clase genérica que implementa dicha interfaz y desarrollé cada uno de los métodos según se describen en el guion de la práctica.
+\
+\
+_List_:
+```TypeScript
+/**
+ * Generic class that implements lists and some of the most importants methods accoding to the interface "Listable".
+ */
+export class List<T> implements Listable<T> {
+  constructor(private list: T[]) {}
+  /**
+   * The second list elements add at the end of first list.
+   * @param list1 First list.
+   * @param list2 Second list.
+   * @returns The first list after the addition.
+   */
+  append(list: List<T>) {
+    for (let i = 0; i < list.length(); i++) {
+      this.list[this.length()] = list.list[i];
+    }
+    return this;
+  }
+  /**
+   * Combine all elements in one list.
+   * @param list Variable number of lists.
+   * @returns List with all elements.
+   */
+  concatenate(...list: List<T>[]) {
+    for (let i = 0; i < list.length; i++) {
+      this.append(list[i]);
+    }
+    return this;
+  }
+
+  /**
+   * Filter a list accondig to a callback.
+   * @param callback Function we use to filter the list.
+   * @returns the filtered list.
+   */
+  filter(callback) {
+    const filteredList = new List([]);
+    let j = 0;
+    for (let i = 0; i < this.length(); i++) {
+      if (callback(this.list[i])) {
+        filteredList.list[j] = this.list[i];
+        j++;
+      }
+    }
+    return filteredList;
+  }
+
+  /**
+   * Get the lits's length.
+   * @returns the list's length.
+   */
+  length() {
+    let i = 0;
+    let result = 1;
+    while (this.list[i + 1] != undefined) {
+      result++;
+      i++;
+    }
+    return result;
+  }
+
+  /**
+   * Modify the list according to a callback.
+   * @param callback The function that modify each element of the list.
+   * @returns The modified list.
+   */
+  map(callback) {
+    for (let i = 0; i < this.length(); i++) {
+      this.list[i] = callback(this.list[i]);
+    }
+    return this;
+  }
+
+  /**
+   * Reduce the whole list to una valor, according to a callback.
+   * @param initialValor Initial valor of the accumulator.
+   * @param accumulator Accumulator where keep the elements.
+   * @param callback Function that apply the accumulator.
+   * @returns The accumulator valor.
+   */
+  reduce(initialValor, accumulator, callback) {
+    accumulator = initialValor;
+    for (let i = 0; i < this.length(); i++) {
+      accumulator = callback(accumulator, this.list[i]);
+    }
+    return accumulator;
+  }
+
+  /**
+   * Reverse the order of the list.
+   * @returns The reversed list.
+   */
+  reverse() {
+    const reversedList = new List([]);
+    let j = 0;
+    for(let i = 1; i <= this.length(); i++) {
+      reversedList.list[j] = this.list[this.length()- i];
+      j++;
+    }
+    return reversedList;
+  }
+
+  /**
+   * Call a function for each list's element.
+   * @param callback Function that is called.
+   */
+  forEach(callback) {
+    for(let i = 0; i < this.length(); i++) {
+      callback(this.list[i]);
+    }
+    return true;
+  }
+}
+```
+Como podemos observar todo se sustenta en un atributo privado de tipo del tipo genérico T que es un array, al igual que ocurría en los dos ejercicios anteriores. Una vez hemos implementado cada uno de los métodos necesarios, realizamos las pruebas con _mocha_ y _chai_, esto se ha realizado con más de un tipo de dato, para poder comprobar de forma satisfactoria la generalidad de la clase diseñada.
+\
+\
+Las pruebas son las siguientes:
+```
+  length() function tests
+    ✔ test4.length() returns 5
+    ✔ test.length() returns 3
+
+  append() function tests
+    ✔ test2.append(test3) returns ['d', 'e', 'f', 'g', 'h', 'i']
+    ✔ test6.append(test7) returns [1, 2, 3, 4, 5, 6]
+
+  concatenate() function tests
+    ✔ test5.concatenate(test11) returns [6, 7, 8, 9, 10]
+    ✔ test8.concatenate(test9, test10) returns ['a', 'b', 'c', 'd', 'e', 'f']
+
+  filter() function tests
+    ✔ test8.filter() returns ['d', 'e', 'f']
+    ✔ test4.filter() returns [4, 5]
+
+  map() function tests
+    ✔ test13.map() returns ['bz', 'cz', 'dz']
+    ✔ test12.map() returns [1, 4, 9]
+
+  reduce() function tests
+    ✔ test13.reduce() returns 'caballo'
+    ✔ test4.reduce() returns 15
+
+  reverse() function tests
+    ✔ test14.reverse() returns ['caballo', 'pato', 'cerdo', 'vaca']
+    ✔ test15.reverse() returns [35, 12, 74]
+
+  forEach() function tests
+    ✔ test14.forEach() returns true
+    ✔ test12.forEach() returns true
+```
+Al igual que en los ejercicios anteriores, también se ha llevado a cabo el encubrimiento con Istanbul:
+```
+--------------------------------|---------|----------|---------|---------|-------------------
+File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------|---------|----------|---------|---------|-------------------
+ ejercicio-2                    |     100 |      100 |     100 |     100 |                   
+  list.ts                       |     100 |      100 |     100 |     100 |                   
+--------------------------------|---------|----------|---------|---------|-------------------
+```
 ### Ejercicio 3 - Ampliando la biblioteca musical
 ## Conclusión
 ## Bibliografía
