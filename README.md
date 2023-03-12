@@ -888,6 +888,9 @@ En el segundo ejercicio también me ha ayudado a comprender el funcionamiento de
 ## Bibliografía
 Para la realización de esta práctica se han consultado las siguientes fuentes bibliográficas:
 [Guion de la práctica 6](https://ull-esit-inf-dsi-2223.github.io/prct06-generics-solid/)
+\
 [Apuntes principios SOLID](https://ull-esit-inf-dsi-2223.github.io/typescript-theory/typescript-solid.html)
+\
 [Apuntes de clases e interfaces genéricas](https://ull-esit-inf-dsi-2223.github.io/typescript-theory/typescript-generics.html)
+\
 [Documentacion de Array en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
