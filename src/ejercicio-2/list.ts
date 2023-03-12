@@ -111,29 +111,3 @@ export class List<T> implements Listable<T> {
     return true;
   }
 }
-
-const prueba = new List(["a", "b", "c"]);
-const prueba2 = new List(["d", "e", "f"]);
-const prueba3 = new List(["g", "h", "i"]);
-const prueba4 = new List([1, 2, 3]);
-const prueba5 = new List([1, 2, 3]);
-
-console.log(prueba.append(prueba2));
-console.log(prueba.concatenate(prueba2, prueba3));
-console.log(prueba.filter(function(item) {
-  return item > "f";
-}));
-console.log(prueba4.map(function(item){
-  return item * item;
-}));
-let accumulator;
-console.log(prueba5.reduce(0, accumulator, function(accumulator, item) {
-  return accumulator + item;
-}))
-console.log(prueba.reduce("", accumulator, function(accumulator, item) {
-  return accumulator + item;
-}))
-console.log(prueba.reverse());
-prueba.forEach(function(item) {
-  console.log(item);
-});
