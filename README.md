@@ -887,6 +887,7 @@ Tras la realzación de estos ejercicios hemos podido comprender la utilidad y el
 En el segundo ejercicio también me ha ayudado a comprender el funcionamiento de métodos que utilizamos frecuentemente. Por último en esta práctica también hemos puesto a prueba los principios SOLID, principalmente destacaría el uso del cuatro principio, _Interface segregation_.
 ## Bibliografía
 Para la realización de esta práctica se han consultado las siguientes fuentes bibliográficas:
+\
 [Guion de la práctica 6](https://ull-esit-inf-dsi-2223.github.io/prct06-generics-solid/)
 \
 [Apuntes principios SOLID](https://ull-esit-inf-dsi-2223.github.io/typescript-theory/typescript-solid.html)
