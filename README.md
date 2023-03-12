@@ -884,7 +884,11 @@ Como podemos ver en el código anterior se ha logrado, a partir de las canciones
 Tras la realzación de estos ejercicios hemos podido comprender la utilidad y el funcionamiento de las clases e interfaces genéricas, así como asentar los conocimientos sobre clases e interfaces de la pasada práctica, especialmente en el primero de los ejercicios.
 \
 \
-En el segundo ejercicio también me ha ayudado a comprender el funcionamiento de métodos que utilizamos frecuentemente. Por último en esta práctica también hemos puesto a prueba los principios SOLID, principalmente destacaría el uso del cuatro principio, _Interface segregation_.
+En el segundo ejercicio también me ha ayudado a comprender el funcionamiento de métodos que utilizamos frecuentemente. En esta práctica también hemos puesto a prueba los principios SOLID, principalmente destacaría el uso del cuatro principio, _Interface segregation_.
+\
+\
+Por último en esta práctica tambien hemos añadido por primera vez los encubrimientos, una herramienta realmente útil. Durante el informe se ha podido ver la tabla de encubrimiento de Instanbul, aunque también se ha puesto el repositorio en coveralls para así obtener más información, consiguiendo la siguiente insignia:
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR/badge.svg?branch=main)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-PablodlFR?branch=main)
 ## Bibliografía
 Para la realización de esta práctica se han consultado las siguientes fuentes bibliográficas:
 \
