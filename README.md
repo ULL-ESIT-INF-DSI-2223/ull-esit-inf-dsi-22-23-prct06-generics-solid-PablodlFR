@@ -777,5 +777,117 @@ File                            | % Stmts | % Branch | % Funcs | % Lines | Uncov
 --------------------------------|---------|----------|---------|---------|-------------------
 ```
 ### Ejercicio 3 - Ampliando la biblioteca musical
+Este ejercicio consiste en una modificación de la biblioteca musical de la práctica anterior. En este informe nos centraremos en los cambios realizados.
+\
+\
+Lo primero es la creación de una entidad single y discos:
+\
+\
+_Single_:
+```TypeScript
+/**
+ * Single type.
+ */
+export class Single {
+  name: string;
+  year: number;
+  private single: Song;
+  /**
+   * 
+   * @param name Disc's name string.
+   * @param year Year when the disc was launched.
+   * @param single A song.
+   */
+  constructor(name, year, songs) {
+    this.name = name;
+    this.year = year;
+    this.single = songs;
+  }
+  get single_() {
+    return this.single
+  }
+}
+```
+_Disc_:
+```TypeScript 
+/**
+ * Disc type.
+ * @param name Disc's name string.
+ * @param year Year when the disc was launched.
+ * @param disc Songs array which conform the disc.
+ * @function disc_ Return the song's array.
+ * @function discNumber Return the total number of songs.
+ * @function discDuration Return the disc duration.
+ * @function reproductions Return the total disc's reproductions.
+ */
+export class Disc {
+  name: string;
+  year: number;
+  disc: Song[];
+  constructor(name, year, songs) {
+    this.name = name;
+    this.year = year;
+    this.disc = songs;
+  }
+
+  get disc_() {
+    return this.disc;
+  }
+
+  discNumber() {
+    return this.disc.length;
+  }
+  reproductions() {
+    let sum = 0;
+    for (let i = 0; i < this.discNumber(); i++) {
+      sum += this.disc[i].reproductions;
+    }
+    return sum;
+  }
+  discDuration() {
+    let sum = 0;
+    for (let i = 0; i < this.discNumber(); i++) {
+      sum += this.disc[i].duration;
+    }
+    return sum;
+  }
+}
+```
+Convertimos la clase _discography_ en una clase genérica:
+```TypeScript
+/**
+ * Discography.
+ */
+export class Discography<T extends Disc | Single> {
+  constructor(private discography: T[]){
+  }
+}
+```
+Como podemos ver ahora la discografía es un array de discos o the singles.
+\
+\
+Para comprobar su correcto funcionamiento observamos que se puede crear correctamente todos los tipos de datos:
+```TypeScript
+const llueve = new Song("Llueve", 240, "Pop-rock", false, 3900000);
+const somos = new Song("Somos", 226, "Rock", false, 1500000);
+const autofotos = new Song("Autofotos", 209, "Pop-rock", false, 18000000);
+
+const volvamosEmpezar = new Disc("Volvamos a Empezar", 2010, [llueve, autofotos]);
+const singleSomos = new Single("Somos", 2009, [somos]);
+
+const melendiDisc = new Discography([volvamosEmpezar, singleSomos]);
+
+const melendi = new Artist("Melendi", 5400000, [melendiDisc]);
+```
+Como podemos ver en el código anterior se ha logrado, a partir de las canciones se han creado discos (varias canciones) y un single(única canción) y se ha podido crear una discografía a partir tanto de discos como de singles y finalmente un artista haciendo uno de dicha discografía.
 ## Conclusión
+Tras la realzación de estos ejercicios hemos podido comprender la utilidad y el funcionamiento de las clases e interfaces genéricas, así como asentar los conocimientos sobre clases e interfaces de la pasada práctica, especialmente en el primero de los ejercicios.
+\
+\
+En el segundo ejercicio también me ha ayudado a comprender el funcionamiento de métodos que utilizamos frecuentemente. Por último en esta práctica también hemos puesto a prueba los principios SOLID, principalmente destacaría el uso del cuatro principio, _Interface segregation_.
 ## Bibliografía
+Para la realización de esta práctica se han consultado las siguientes fuentes bibliográficas:
+[Guion de la práctica 6](https://ull-esit-inf-dsi-2223.github.io/prct06-generics-solid/)
+[Apuntes principios SOLID](https://ull-esit-inf-dsi-2223.github.io/typescript-theory/typescript-solid.html)
+[Apuntes de clases e interfaces genéricas](https://ull-esit-inf-dsi-2223.github.io/typescript-theory/typescript-generics.html)
+[Documentacion de Array en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array)

@@ -17,8 +17,14 @@
     "./src/ejercicio-1/seriescollection.ts",
     "./src/ejercicio-2/listable.ts",
     "./src/ejercicio-2/list.ts",
-    // "./src/ejercicio-1.ts",
-    // "./src/ejercicio-2.ts"
+    "./src/ejercicio-3/artist.ts",
+    "./src/ejercicio-3/disc.ts",
+    "./src/ejercicio-3/discography.ts",
+    "./src/ejercicio-3/group.ts",
+    "./src/ejercicio-3/search.ts",
+    "./src/ejercicio-3/single.ts",
+    "./src/ejercicio-3/soloist.ts",
+    "./src/ejercicio-3/song.ts"
   ],
   "out": "./docs" 
 }
